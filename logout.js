@@ -1,3 +1,3 @@
 function logout(){
-    window.location.assign("loginpage.html");
+    window.location.assign("index.html");
 }
