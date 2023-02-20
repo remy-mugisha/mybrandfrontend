@@ -1,4 +1,4 @@
-fetch('https://myapi-qgl7.onrender.com/api/posts/all',{
+fetch('https://remmyapi.onrender.com/api/posts/all',{
     method: 'GET',
     headers: {
         'Authorization': `Bearer ${JSON.parse(localStorage.getItem('mora'))}`,

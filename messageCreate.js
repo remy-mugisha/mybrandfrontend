@@ -7,7 +7,7 @@ SubmitContact.addEventListener('click', ()=>{
     let Email = document.getElementById('email');
     let subject = document.getElementById('subject')
     let message = document.getElementById('message');
-    const url='https://myapi-qgl7.onrender.com/api/messages/create';
+    const url='https://remmyapi.onrender.com/api/messages/create';
     const query={
         fullName: fullName.value,
         email: Email.value,

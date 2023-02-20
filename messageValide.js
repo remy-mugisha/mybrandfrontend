@@ -7,7 +7,7 @@ let fullName = document.getElementById('fullName');
 let Email = document.getElementById('email');
 let subject = document.getElementById('subject');
 let message = document.getElementById('message');
-const url='https://myapi-qgl7.onrender.com/api/messages/create';
+const url='https://remmyapi.onrender.com/api/messages/create';
 const query={
     fullName: fullName.value ,
     email: Email.value,
@@ -15,7 +15,7 @@ const query={
     message: message.value
 };
 
-if(query.username == ""){
+if(query.fullName == ""){
     Swal.fire(
         'Opps..!',
         'Name is Empty!',

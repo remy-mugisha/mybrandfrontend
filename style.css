@@ -521,6 +521,12 @@ section.contact form .btn:hover{
         width: 100%;
        
 }
+.signup-form{
+    height: 87vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 6rem 0 7rem;
+}
 .overlay{
     height: 87vh;
     width: 100%;

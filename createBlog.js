@@ -18,7 +18,7 @@ document.querySelector('#picture').addEventListener('change', function () {
     })
 })
 
-fetch('https://myapi-qgl7.onrender.com/api/posts/all')
+fetch('https://remmyapi.onrender.com/api/posts/all')
         .then((res) => res.json())
         .then((data) => {
              const articles =data
@@ -54,7 +54,7 @@ document.querySelector('#add-blog').addEventListener('submit', (e) => {
     const isInEditMode = articleId.length !== 0
    
     if (isInEditMode) {
-        const url=`https://myapi-qgl7.onrender.com/api/posts/update/${articleId}`
+        const url=`https://remmyapi.onrender.com/api/posts/update/${articleId}`
 
         fetch(url, {
             method: 'PUT',
@@ -73,7 +73,7 @@ document.querySelector('#add-blog').addEventListener('submit', (e) => {
             })
         .catch(error => console.error(error));
     } else {
-        const url= 'https://myapi-qgl7.onrender.com/api/posts'
+        const url= 'https://remmyapi.onrender.com/api/posts'
         fetch(url, {
             method: 'POST',
             headers: {

@@ -2,7 +2,7 @@ let isEmailValid = false
 let isPasswordValid = false
 
 let formError = document.querySelector(".form_error")
-const url = 'https://myapi-qgl7.onrender.com/api/auth/login'
+const url = 'https://remmyapi.onrender.com/api/auth/login'
 document.querySelector('#form_login').addEventListener('submit', (e) => {
     e.preventDefault()
     const email= e.target.elements['email'].value;

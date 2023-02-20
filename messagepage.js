@@ -75,7 +75,7 @@
 // })
 
 
-    fetch('https://myapi-qgl7.onrender.com/api/messages',{
+    fetch('https://remmyapi.onrender.com/api/messages',{
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${JSON.parse(localStorage.getItem('mora'))}`,
@@ -109,7 +109,7 @@
             //delete
             deleteicon.addEventListener('click', ()=>{
               console.log(result[i]._id)
-                fetch(`https://myapi-qgl7.onrender.com/api/messages/delete/${result[i]._id}`, {
+                fetch(`https://remmyapi.onrender.com/api/messages/delete/${result[i]._id}`, {
                     method: 'DELETE',
                     headers: { 
             'Authorization': `Bearer ${JSON.parse(localStorage.getItem('mora'))}`,
