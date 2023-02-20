@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <title>admin</title>
+</head>
+<body>
+    <div class="dashboard">
+    <div class="content-dash" >
+        <div class="logo">
+            <a href="#">R</a>
+        </div><br>
+        <div class="home">
+        <span class="material-symbols-sharp">
+            house
+            </span>
+        <h3><a style="color:rgb(180, 180, 180)" href="dashboard.html">Dashboard</a></h3>
+    </div>
+        <div class="maincontant">
+            <div class="post1">
+            <span class="material-symbols-sharp">
+                post_add
+                </span>
+           <h5><a style="color:rgb(180, 180, 180)" href="createpostpage.html">Add Post</a></h5> 
+        </div>
+        <div class="post2">
+            <span class="material-symbols-sharp">
+                sms
+                </span>
+                <h5><a style="color:rgb(180, 180, 180)" href="messagepage.html">Message</a></h5> 
+            </div>
+        </div>
+    </div>
+    <div class="content-body">
+        <div class="header-dash">
+            <div class="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+          <div class="user">
+            <span class="material-icons-sharp user-user">account_circle</span> 
+                
+          <div class="dropdown">
+         <span class="user-user">User</span>
+        <div class="dropdown-content" style="background-color: rgb(9, 57, 9);">
+        <button onclick="logout();">Log Out</button>
+       </div>
+       </div>
+          </div>
+       </div>
+   <div class="body2-dash">
+    <!-- <div class="fa-button">
+        <button class="btn-primary" style="width: 12rem;">Create new Blog</button>
+    </div> -->
+   <div id="form1">
+    <div>
+            <h3 style=" height: 3rem; padding-top: 0.75rem; color: #fff" class="btn-primary">Create New Blog</h3>
+              <form id="add-blog" action="#" method="post" class="table" enctype="application/json">
+                <div class="form2">
+                  <input type="file" name="image" id="picture" class="custom-file-input">
+            <label></label>
+             <input class="blog-title" type="text" name="title" placeholder="Enter the title">
+         
+             <label>  </label>
+              <textarea name="editor1" id="description" cols="40" rows="15" required></textarea>
+         </div>
+         <button type="submit" class="add btn-primary"></i></button>    
+         <!-- <button type="submit" class="btn-primary" onclick="save()">Save</button> -->
+      </div>
+              </form>
+   </div>
+   
+   <div class="table">
+    <table >
+      <thead>
+     <tr>
+         <!-- <th> Image</th> -->
+         <th>Title</th>
+         <th>description</th>
+      </tr>
+      </thead>
+      <tbody>
+        
+     </tbody>
+  </div>
+      <!-- <div id="table1">
+        
+      </div> -->
+</div>
+    </div>
+ 
+</div>
+<!-- <script>
+//     const url="http://localhost:8000";
+//     var form1 = `<div>
+//         <h3 style=" height: 3rem; padding-top: 0.75rem; color: #fff" class="btn-primary">Create New Blog</h3>
+        
+//         <div class="form2">
+//         <input type="file" class="file" id="image">
+//     <label></label>
+//     <input type="title" id="title" placeholder="Enter Your Title">
+
+//     <label>  </label>
+//      <textarea id="desc" placeholder="Talking on Blogs" required></textarea>
+//     </div>
+//   <button type="submit" class="btn-primary" onclick="save()">Save</button>
+// </div>`;
+
+// function table1() {
+//     let table1 = `<table class="table1">
+//   <thead>
+//     <tr>
+//       <th>NO</th>
+//       <th>Photos</th>
+//       <th>Title</th>
+//       <th>Desciption</th>
+//       <th>Edit</th>
+//       <th>Delete</th>
+//     </tr>
+//   </thead>
+//   <tbody>`;
+//     for (let i = 0; i < needs.length; i++){
+//         table1 = table1+ `<tr>
+//       <td>${i + 1}</td>
+//       <td>${needs[i].image}</td>
+//       <td>${needs[i].title}</td>
+//       <td>${needs[i].desc}</td>
+//       <td><button type="button" class="btn" style="background-color: #ffc720;" onclick="edit(${i})">Edit</button></td>
+//       <td><button type="button" class="btn" style="background-color: #dc3545; color: #fff;" onclick="deleteData(${i})">Delete</button></td>
+//     </tr> `;
+//     };
+//     table1 = table1+`</tbody>
+//     </table>`;
+//     document.getElementById("table1").innerHTML = table1;
+// };
+// document.getElementById("form1").innerHTML = form1;
+// needs = [];
+// getData();
+// table1();
+// function getData(){
+//     let Data = localStorage.getItem("needs");
+//     if (Data) {
+//         needs = JSON.parse(Data);
+//     } else {
+//         setData();
+//     };
+// };
+// function setData() {
+//     localStorage.setItem("needs", JSON.stringify(needs));
+// };
+// function save() {
+//     let image= document.getElementById("image");
+//     let title= document.getElementById("title");
+//     let desc = document.getElementById("desc");
+
+//     if(image.value == 0){
+//         alert("photo is Empty");
+        
+//         return
+//     }
+//     if (title.value == 0) {
+//         alert("title is Empty");
+//         return
+//     }
+    
+//     let data = {
+//         image: image.value,
+//         title: title.value,
+//         desc: desc.value
+//     };
+//     needs.push(data);
+//     setData();
+
+//     table1();
+//     image.value = "";
+//     title.value = "";
+//     desc.value = "";
+// };
+// function deleteData(event) {
+//     needs.splice(event, 1);
+//     setData();
+//     table1();
+
+// };
+
+// function edit(event) {
+//     let editForm1= 
+//     `<div>
+//         <h3 style=" height: 3rem; padding-top: 0.75rem; color: #fff" class="btn-primary">Edit Post</h3>
+//         <div class="form2">
+//         <input type="file" value="${needs[event].image}" id="newImage">
+//     <label></label>
+//     <input type="title" value="${needs[event].title}" id="newTitle" placeholder="Enter Your Title">
+//  <label></label>
+//     <textarea type="text" value="${needs[event].desc}" id="newDesc" placeholder="Talking on Blogs" required></textarea>
+//     <div>
+//   <button type="submit" class="btn-primary" onclick="update(${event})">Update</button>
+// </div>`;
+//     document.getElementById("form1").innerHTML = editForm1;
+// };
+// function update(event) {
+//     let newImage = document.getElementById('newImage');
+//     let newTitle = document.getElementById('newTitle'); 
+//     let newDesc = document.getElementById('newDesc');
+
+//     needs[event] = {
+//         image: newImage.value,
+//         title: newTitle.value,
+//         desc: newDesc.value
+//     };
+//     setData();
+//     table1();
+//     document.getElementById("form1").innerHTML = form1;
+// }
+
+// const url = "http://localhost:8000";
+
+
+    var form1 = `<div>
+        <h3 style=" height: 3rem; padding-top: 0.75rem; color: #fff" class="btn-primary">Create New Blog</h3>
+        
+        <div class="form2">
+        <input type="file" class="file" id="image">
+    <label></label>
+    <input type="title" id="title" placeholder="Enter Your Title">
+
+    <label>  </label>
+     <textarea id="desc" placeholder="Talking on Blogs" required></textarea>
+    </div>
+  <button type="submit" class="btn-primary" onclick="save()">Save</button>
+</div>`;
+
+
+function getData(){
+  fetch(`${'http://localhost:8000'}/api/posts`)
+      .then((response) => response.json())
+      .then(data => {
+          details = data;
+          table();
+      })
+      .catch((error) => {
+        console.error("There was a problem with the fetch operation:", error);
+      });
+    
+};
+
+function table1() {
+    let table1 = `<table class="table1">
+  <thead>
+    <tr>
+      <th>NO</th>
+      <th>Photos</th>
+      <th>Title</th>
+      <th>Desciption</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>`;
+    for (let i = 0; i < needs.length; i++){
+        table1 = table1+ `<tr>
+      <td>${i + 1}</td>
+      <td>${needs[i].image}</td>
+      <td>${needs[i].title}</td>
+      <td>${needs[i].desc}</td>
+      <td><button type="button" class="btn" style="background-color: #ffc720;" onclick="edit(${i})">Edit</button></td>
+      <td><button type="button" class="btn" style="background-color: #dc3545; color: #fff;" onclick="deleteData(${i})">Delete</button></td>
+    </tr> `;
+    };
+    table1 = table1+`</tbody>
+    </table>`;
+    document.getElementById("table1").innerHTML = table1;
+};
+document.getElementById("form1").innerHTML = form1;
+needs = [];
+getData();
+table1();
+// function getData(){
+//     let Data = localStorage.getItem("needs");
+//     if (Data) {
+//         needs = JSON.parse(Data);
+//     } else {
+//         setData();
+//     };
+// };
+// function setData() {
+//     //localStorage.setItem("details", JSON.stringify(details));
+// };
+
+function save() {
+    let title = document.getElementById("title");
+    let desc = document.getElementById("desc");
+    let image = document.getElementById("image");
+
+    // if (title.value == 0 || desc.value == 0) {
+    //     alert("Please enter all the fields");
+    //     return
+    // }
+    // let body = {
+    //     title: title.value,
+    //     desc: desc.value,
+    //     image: image.value
+    // };
+  console.log(title.value, desc.value, image.value);
+ // const token =
+ //   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZGMyN2QyODZiMGM4MzZhNzc5ODU3MiIsImlhdCI6MTY3NTc2NTU1NiwiZXhwIjoxNjc1ODUxOTU2fQ.lzJWBpnuH1lKc7LrQSgsUVPV2_u6iAueAx8iv89bTpE";
+  
+  const body = {
+    title: title.value,
+    desc: desc.value,
+    image: image.value,
+  };
+  fetch(`${'http://localhost:8000'}/api/posts`, {
+        method: "POST",
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+        Authorization: `Bearer ${"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZTdjMTc3MmI5NmI4NDhjOWNjZTZmNSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY3NjIwNDU0NX0.WnOZq75dNArjZcV--XgQOt56ZcKEFJngKaI2Lh1v9uM"}`,
+        },
+        body: JSON.stringify(body),
+      })
+    .then((response) => response.json())
+    .then((data) => {
+    //   console.log(data);
+    })
+    .catch((error) => {
+      console.error("let us check", error);
+    });
+    //details.push(data);
+    // setData();
+    // console.log(details)
+    // console.log(email.value)
+    table1();
+    title.value = "";
+    desc.value = "";
+    image.value = "";
+};
+function deleteData(event) {
+    // details.splice(index, 1);
+    // setData();
+
+    fetch(`${'http://localhost:8000'}/posts/${details.data[event]._id}`, {
+      method: 'DELETE',
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZTdjMTc3MmI5NmI4NDhjOWNjZTZmNSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY3NjIwNDU0NX0.WnOZq75dNArjZcV--XgQOt56ZcKEFJngKaI2Lh1v9uM"}`,
+      },
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log(data);
+      details.data.splice(event, 1);
+      table();
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+
+    // console.log('delete work')
+    // console.log(details)
+};
+
+
+function edit(event) {
+    let editForm1= 
+    `<div>
+        <h3 style=" height: 3rem; padding-top: 0.75rem; color: #fff" class="btn-primary">Edit Post</h3>
+        <div class="form2">
+        <input type="file" value="${needs[event].image}" id="newImage">
+    <label></label>
+    <input type="title" value="${needs[event].title}" id="newTitle" placeholder="Enter Your Title">
+ <label></label>
+    <textarea type="text" value="${needs[event].desc}" id="newDesc" placeholder="Talking on Blogs" required></textarea>
+    <div>
+  <button type="submit" class="btn-primary" onclick="update(${event})">Update</button>
+</div>`;
+    document.getElementById("form1").innerHTML = editForm1;
+};
+
+
+function update(event) {
+    let newTitle = document.getElementById('newTitle');
+    let newDesc = document.getElementById('NewDesc');
+
+let image = document.getElementById("image");
+// input.addEventListener("change", function() {
+//     var file = input.files[0];
+//     var reader = new FileReader();
+//     reader.onloadend = function() {
+//       var imgData = reader.result;
+//     }
+//     reader.readAsDataURL(file);
+// });
+
+fetch(`${'http://localhost:8000'}/api/posts/update/${event}`, {
+  method: "PUT",
+  mode: "cors",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(body),
+})
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error("There was a problem with the fetch operation:", error);
+  });
+    details[event] = {
+        title: newTitle.value,
+        desc: newDes.value,
+        image: newImage
+    };
+    setData();
+    table();
+    document.getElementById("form").innerHTML = form;
+// console.log('update work')
+// console.log(details)
+}
+</script> -->
+</body>
+<script src="getBlog.js"></script>
+<script src="logout.js"></script>
+<script src="createBlog.js"></script>
+</html>

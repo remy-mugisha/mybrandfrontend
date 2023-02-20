@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myself.com</title>
+    <!--MATERIAL ICONS CDN-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp">
+    <!--MONTSERRAT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<!--ICONSCOUT CDN-->
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+
+ <!--STYLESHEET-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">R</a>
+            </div>
+           
+           <ul id="nnav">
+               <li><a href="index.html" class="active">Home</a></li>
+               <li><a href="#services">Services</a></li>
+               <li><a href="#about">About us</a></li>
+               <li><a href="#skills">Skills</a></li>
+               <li><a href="#blog">Blog</a></li>
+               <li><a href="#contact">Contact</a></li>
+               <li><a class="login" href="loginpage.html">Login</a></li>
+           </ul>
+           <button id="menu-btn"><span class="material-icons-sharp" onclick="myFunction();" >menu</span></button>
+           <button id="close-btn"><span class="material-icons-sharp">close</span></button>
+        </div>
+    </nav>
+    <!--========================== END OF NAVBAR ==========================-->
+  <div id="container-login">
+
+    <!-- <form  id="form_login" method="post" name="form" class="overlay">
+        <label>Signin</label>
+        <input type="text" id="input_email" name="email" placeholder="email" id="username" >
+        <div class="email_error"></div>
+        <input type="password" id="input_password" name="password" placeholder="Password" id="pass password" >
+        <div class="password_error"></div>
+        <div class="form_error"></div>
+        <button type="submit" class="button">Signin</button>
+        </form>   -->
+    
+    <form id="form_login" method="post" name="form" class="overlay">
+        <h2 style="text-align: center; color: #fff;">Login</h2>
+        <div class="container"> 
+            <label for="username" >Username </label> 
+            <input type="text" id="input_email" name="email" placeholder="email" id="username">
+            <!-- <p style="color: red; visibility: hidden;">Try again please</p> -->
+            <div class="email_error"></div>
+            <label for="password" >Password </label> 
+            <input type="password" id="input_password" name="password" placeholder="Password" id="pass password">
+            <div class="password_error"></div>
+            <div class="form_error"></div>
+            <!-- <p style="color: red; visibility: hidden;">Try again please</p> -->
+           <button type="submit" class="button">Login</button>
+            Forgot <a href="#" style="color: rgb(15, 117, 34);"> password? </a> <br><br>
+             <a href="register.html" style="color: rgb(15, 117, 34);"> Sign up </a> 
+        </div> 
+    </form> 
+    
+  </div>
+
+
+    <footer>
+    
+        
+          <div class="copyright">
+            copyright &copy; myself
+            <span class="material-icons-sharp">
+                email
+                </span>
+                remymugisha64@gmail.com
+              
+            
+                <span class="material-icons-sharp">
+                    call
+                    </span>
+                   +250788848185
+                    
+             
+          </div>
+          
+    </footer>
+    <script type="text/javascript" src="/script.js"></script>
+ <script src="https://smtpjs.com/v3/smtp.js"></script>
+ <script>
+    function myFunction(){
+        var navbar = document.getElementById('nnav');
+        navbar.classList.toggle('show'); 
+    }
+
+//     // login validation==============
+
+// const username = document.querySelector('#username');
+// const password = document.querySelector('#password');
+// const submit = document.querySelector('#submit');
+
+// submit.addEventListener('click', (event)=>{
+// event.preventDefault();
+// // username============
+// if (username.value.trim() == ''){
+//   error(username, 'username can be empty');
+// }else{
+//   success(username);
+// }
+// // password==================
+// if (password.value.trim()== ''){
+//   error(password, '');
+
+//   }else{
+//     success(password);
+//   }
+// });
+
+// function error(element, msg){
+//   element.style.border = '2px red solid';
+//   const parent = element.parentElement;
+//   const p = parent.querySelector('p');
+//   p.textContent = msg;
+//   p.style.visibility = 'visible'; 
+// }
+
+// function success(element){
+//   element.style.border = '2px green solid';
+//   const parent = element.parentElement;
+//   const p = parent.querySelector('p');
+//   p.style.visibility = 'hidden'; 
+// }
+
+// function auth(){
+//  let username = document.getElementById('username').value;
+//  let password = document.getElementById('password').value;
+//  if(username== "adimn" && password== "adimn"){
+//   window.location.assign("dashboard.html");
+//   alert("Login Successfully");
+//  }
+//  else{
+//   alert("Incorrect");
+//   return;
+//  }
+// }
+
+// const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+// const passwordRegex= /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
+// let isEmailValid = false
+// let isPasswordValid = false
+
+// let formError = document.querySelector(".form_error")
+// const url = "http:localhost:8000/api/auth/login"
+// document.querySelector('#submit').addEventListener('submit', (e) => {
+//     e.preventDefault()
+//     const email= e.target.elements['username'].value;
+//     const password= e.target.elements['password'].value;
+//     const loginData = {
+//         email: email,
+//         password: password
+//     }
+//     if(isEmailValid && isPasswordValid){
+//         fetch(url, {
+//             method: 'POST',
+//             headers: {
+//                 'Content-Type': 'application/json',
+//             },
+//             body: JSON.stringify(loginData)
+//         })
+//         .then((response) => response.json())
+//         .then((data) => {
+//                 const accessToken = data.token; 
+//                 console.log(accessToken)
+//                 localStorage.setItem('mora', JSON.stringify(accessToken))
+//                 localStorage.setItem("isLoggedIn", JSON.stringify(true))
+//                 window.location.assign('dashboard.html')
+//         })
+//         .catch((error) => {
+//             console.error('Error:', error.message);
+//             formError.textContent = error.message
+//             setTimeout(() => {
+//                 formError.textContent = ""
+//             }, 5000)
+//         });
+//     }
+// });
+
+// let emailError = document.querySelector(".email_error");
+
+// document.getElementById('username').addEventListener('input', (e) => {
+//     const email = e.target.value
+//     if (e.target.value.match(emailRegex)) {
+//         isEmailValid = true
+//         emailError.textContent = ""
+//     }else if(email.length == 0){
+//         isEmailValid = false
+//         emailError.textContent = "Enter your email"
+//     }else{
+//         isEmailValid = false
+//         emailError.textContent = "Email is Invalid"
+//     }
+        
+// });
+
+// let passwordError = document.querySelector(".password_error")
+
+// document.getElementById('password').addEventListener('input', (e) => {
+//     const password = e.target.value
+//     if (password.match(passwordRegex)) {
+//         isPasswordValid = true
+//         passwordError.textContent = "";
+//     } else if(password.length == 0){
+//         isPasswordValid = false
+//         passwordError.textContent = "Enter your password, Minimum 8 characters with at least one letter,one digit and one special character ";
+//     } else {
+//         isPasswordValid = false
+//         passwordError.textContent = " Password is Invalid";
+//     }
+// })
+
+</script>
+
+</body>
+</html>

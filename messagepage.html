@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <title>admin</title>
+</head>
+
+<body>
+    <div class="dashboard">
+        <div class="content-dash">
+            <div class="logo">
+                <a href="#">R</a>
+            </div><br>
+            <div class="home">
+            <span class="material-symbols-sharp">
+                house
+            </span>
+            <h3><a style="color:rgb(180, 180, 180)" href="dashboard.html">Dashboard</a></h3>
+        </div>
+            <div class="maincontant">
+                <div class="post1">
+                    <span class="material-symbols-sharp">
+                        post_add
+                    </span>
+                    <h5><a style="color:rgb(180, 180, 180)" href="createpostpage.html">Add Post</a></h5>
+                </div>
+                <div class="post2">
+                    <span class="material-symbols-sharp">
+                        sms
+                    </span>
+                    <h5><a style="color:rgb(180, 180, 180)" href="messagepage.html">Message</a></h5>
+                </div>
+
+            </div>
+        </div>
+        <div class="content-body">
+            <div class="header-dash">
+                <div class="menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="user">
+                    <span class="material-icons-sharp user-user">account_circle</span>
+
+                    <div class="dropdown">
+                        <span class="user-user">User</span>
+                        <div class="dropdown-content" style="background-color: rgb(9, 57, 9);">
+                            <button onclick="logout();">Log Out</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="body2-dash">
+
+                <div class="table">
+                  <table >
+                    <thead>
+                   <tr>
+                       <th>Name</th>
+                       <th>Email</th>
+                       <th>Subject</th>
+                       <th>Messages</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                   </tbody>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="messagepage.js"></script>
+    <script>
+//         const details = JSON.parse(localStorage.getItem('details'));
+//         function table(){
+//             let tableCols = `<table class="table">
+//   <thead>
+//     <tr>
+//       <th>NO</th>
+//       <th>Name</th>
+//       <th>Email</th>
+//       <th>Subject</th>
+//       <th>message</th>
+//       <th>Delete</th>
+//     </tr>
+//   </thead>
+//   <tbody>`;
+//             for (let i = 0; i < details.length; i++) {
+//                 tableCols = tableCols + `<tr>
+//       <td>${i + 1}</td>
+//       <td>${details[i].name}</td>
+//       <td>${details[i].email}</td>
+//       <td>${details[i].subject}</td>
+//       <td>${details[i].message}</td>
+//       <td><button type="button" style="background-color: #dc3545; color: #fff" onclick="deleteData(${i})">Delete</button></td>
+//     </tr> `;
+//             };
+//             table = table + `</tbody>
+//     </table>`;
+//             const tableId = document.getElementById("table");
+//             tableId.innerHTML = tableCols;
+//         };
+//         // document.getElementById("form").innerHTML = form;
+//         table();
+
+//         function setData(){
+//             localStorage.setItem("details", JSON.stringify(details));
+//         };
+
+//         function deleteData(index){
+//             // console.log(index)
+//         details.splice(index,1) 
+//             setData();
+//             table();
+
+//             // console.log('delete work')
+//             // console.log(details)
+//         };
+
+
+    // const url = "http://localhost:8000";
+      // const details = JSON.parse(localStorage.getItem('details'));
+
+
+
+    </script>
+</body>
+<script src="logout.js"></script>
+</html>
