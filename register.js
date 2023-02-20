@@ -14,7 +14,7 @@ const createUser = () => {
     let atpos = email.indexOf("@");
     let dotpos = email.lastIndexOf(".");
     if (name == "") {
-      signNameError.innerHTML = "Please enter only letters in this field.";
+      signNameError.innerHTML = "";
       signupForm.username.focus();
     } else if ((atpos < 1 || dotpos - atpos < 2) && email == "") {
       signEmailError.innerHTML = "Invalid email!";
